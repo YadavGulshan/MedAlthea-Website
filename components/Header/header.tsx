@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-
 const HeaderComponent = () => {
   const primaryMenuItem = [
     { item: 'About', href: '#' },
@@ -14,7 +13,7 @@ const HeaderComponent = () => {
           <div className="flex justify-between">
             <div>
               <a href="#" className="flex items-center py-4 px-2">
-                <span className="companyName text-3xl font-[550] text-black">
+                <span className={`companyName text-3xl font-[550] text-black `}>
                   MedAlthea
                 </span>
               </a>
