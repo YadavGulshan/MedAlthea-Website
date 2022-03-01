@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import styles from '../../styles/header.module.css'
 const HeaderComponent = () => {
   const primaryMenuItem = [
     { item: 'About', href: '#' },
@@ -13,7 +14,9 @@ const HeaderComponent = () => {
           <div className="flex justify-between">
             <div>
               <a href="#" className="flex items-center py-4 px-2">
-                <span className={`companyName text-3xl font-[550] text-black `}>
+                <span
+                  className={`  font-Russo text-3xl font-[550] text-black `}
+                >
                   MedAlthea
                 </span>
               </a>
@@ -21,6 +24,7 @@ const HeaderComponent = () => {
             <div className="items-center space-x-1 md:flex">
               {primaryMenuItem.map((item, index) => (
                 <a
+                  key={index}
                   className="font-regular py-4 px-5 text-xl text-black transition duration-300 hover:text-green-500"
                   href={item.href}
                 >
