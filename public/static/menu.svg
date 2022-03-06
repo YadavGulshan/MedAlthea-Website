@@ -1,0 +1,11 @@
+<svg
+className="h-8 w-8 text-[#1D2B4F]"
+fill="none"
+stroke-linecap="round"
+stroke-linejoin="round"
+strokeWidth="2"
+viewBox="0 0 24 24"
+stroke="currentColor"
+>
+<path d="M4 6h16M4 12h16M4 18h16"></path>
+</svg>

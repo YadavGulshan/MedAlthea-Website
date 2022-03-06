@@ -1,7 +1,31 @@
 import React from 'react'
 import { useState } from 'react'
 import styles from '../../styles/header.module.css'
+import Box from '@mui/material/Box'
+import Tabs from '@mui/material/Tabs'
+import Tab from '@mui/material/Tab'
+import MobileMenu from './widget/mobilemenu'
+interface LinkTabProps {
+  label?: string
+  href?: string
+}
+function LinkTab(props: LinkTabProps) {
+  return (
+    <Tab
+      component="a"
+      onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+        event.preventDefault()
+      }}
+      {...props}
+    />
+  )
+}
 const HeaderComponent = () => {
+  const [value, setValue] = React.useState(0)
+
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+    setValue(newValue)
+  }
   const [isVisible, setVisible] = useState(false)
   const block = isVisible ? '' : 'hidden'
   const primaryMenuItem = [
@@ -47,41 +71,9 @@ const HeaderComponent = () => {
               </a>
             </div>
             <div className="flex items-center md:hidden">
-              <button
-                onClick={() => setVisible(!isVisible)}
-                className="outline-none"
-              >
-                <svg
-                  className="h-8 w-8 text-[#1D2B4F]"
-                  fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-              </button>
+              <MobileMenu />
             </div>
           </div>
-        </div>
-
-        <div
-          className={`my-2 mx-auto max-w-6xl px-4 transition-[display] duration-300 md:hidden ${block}`}
-        >
-          <ul className="">
-            {primaryMenuItem.map((items, index) => (
-              <li key={index}>
-                <a
-                  href="#services"
-                  className="block px-2 py-4 text-sm transition duration-300 hover:bg-green-500"
-                >
-                  {items.item}
-                </a>
-              </li>
-            ))}
-          </ul>
         </div>
       </nav>
     </>
