@@ -4,14 +4,12 @@ import Drawer from '@mui/material/Drawer'
 import Button from '@mui/material/Button'
 import List from '@mui/material/List'
 import ListItem from '@mui/material/ListItem'
-import ListItemIcon from '@mui/material/ListItemIcon'
-import ListItemText from '@mui/material/ListItemText'
-import InboxIcon from '@mui/icons-material/MoveToInbox'
-import MailIcon from '@mui/icons-material/Mail'
+import Link from '@mui/material/Link'
+import MenuIcon from '@mui/icons-material/Menu'
 
 type Anchor = 'menu'
 
-export default function MobileMenu() {
+export default function MobileMenu(props: { item: string; href: string }) {
   const [state, setState] = React.useState({
     menu: false,
   })
@@ -34,14 +32,28 @@ export default function MobileMenu() {
     <Box
       sx={{ width: 'auto' }}
       role="presentation"
+      className=" item-center h-64"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {['About', 'Services', 'Contact'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
+      <List sx={{ height: '100%' }}>
+        {navList.map((items, index) => (
+          <Link
+            href={items.href}
+            underline="none"
+            className="font-regular py-4 px-5 text-lg text-[#1D2B4F] transition duration-300 hover:text-black"
+          >
+            {/* <ListItem
+                  button
+                  key={index}
+                  sx={{
+                    alignItems: 'center',
+                    flexDirection: 'column',
+                    fontSize: '24px',
+                  }}
+                > */}
+            {items.item}
+          </Link>
         ))}
       </List>
     </Box>
@@ -51,7 +63,9 @@ export default function MobileMenu() {
     <div>
       {(['menu'] as const).map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <Button onClick={toggleDrawer(anchor, true)}>
+            <MenuIcon className="text-3xl text-[#1D2B4F]" />
+          </Button>
           <Drawer
             anchor={'top'}
             open={state[anchor]}
