@@ -3,13 +3,8 @@ import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import Button from '@mui/material/Button'
 import List from '@mui/material/List'
-<<<<<<< HEAD
 import Link from '@mui/material/Link'
 import MenuIcon from '@mui/icons-material/Menu'
-=======
-import ListItem from '@mui/material/ListItem'
-import ListItemText from '@mui/material/ListItemText'
->>>>>>> e24552872e369d78a14af81104c88440a2a45aae
 
 type Anchor = 'menu'
 const primaryMenuItem = [
