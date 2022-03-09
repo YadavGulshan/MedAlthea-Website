@@ -5,11 +5,11 @@ const IntroPage = () => {
     <>
       <section className="my-2  mx-auto h-fit bg-white xl:max-w-6xl">
         <div className="mx-5 flex h-full flex-col items-center justify-between xl:flex-row">
-          <div className="mx-2 mt-32 mb-24 h-full text-center xl:w-2/3 xl:text-left">
-            <h1 className="py-5 font-Inter text-5xl font-extrabold text-[#1D2B4F] ">
+          <div className="mx-2 mt-28 mb-24 h-full text-center xl:w-2/3 xl:text-left">
+            <h1 className="py-5 font-Inter text-4xl font-extrabold text-[#1D2B4F] xl:text-5xl ">
               We are providing you the access to all your health care needs.
             </h1>
-            <p className="py-5 font-Inter text-xl font-medium text-[#1D2B4F] lg:px-32 xl:pl-0 xl:pr-32">
+            <p className="py-5 font-Inter font-medium text-[#1D2B4F] lg:px-32 xl:pl-0 xl:pr-32 xl:text-xl">
               Fugiat debitis ab vel. Accusamus eaque eius minus mollitia
               consequuntur quos dolorem ab. Cum qui ut aliquam ut eligendi.
             </p>
