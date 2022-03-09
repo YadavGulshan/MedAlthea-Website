@@ -1,5 +1,6 @@
 import React from 'react'
 import style from '../../styles/intropage.module.css'
+import Image from 'next/image'
 const IntroPage = () => {
   return (
     <>
@@ -21,10 +22,13 @@ const IntroPage = () => {
           </div>
 
           <div className="flex items-center justify-center xl:w-1/3 ">
-            <img
+            <Image
               className="lg:h-5/12 mb-10 lg:w-5/12 xl:w-full"
               src="/static/doctor.svg"
               alt="Doctor"
+              width={500}
+              height={500}
+              
             />
           </div>
         </div>

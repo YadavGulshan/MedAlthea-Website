@@ -19,17 +19,17 @@ export default function MobileMenu() {
 
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event.type === 'keydown' &&
-        ((event as React.KeyboardEvent).key === 'Tab' ||
-          (event as React.KeyboardEvent).key === 'Shift')
-      ) {
-        return
-      }
+      (event: React.KeyboardEvent | React.MouseEvent) => {
+        if (
+          event.type === 'keydown' &&
+          ((event as React.KeyboardEvent).key === 'Tab' ||
+            (event as React.KeyboardEvent).key === 'Shift')
+        ) {
+          return
+        }
 
-      setState({ ...state, [anchor]: open })
-    }
+        setState({ ...state, [anchor]: open })
+      }
 
   const list = (anchor: Anchor) => (
     <Box
@@ -45,6 +45,7 @@ export default function MobileMenu() {
       >
         {primaryMenuItem.map((items, index) => (
           <Link
+            key={index}
             href={items.href}
             className="text-lg font-semibold text-[#1D2B4F]"
             underline="none"
