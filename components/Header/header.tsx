@@ -67,7 +67,7 @@ const HeaderComponent = () => {
               </a>
             </div>
             <div className="flex items-center md:hidden">
-              <MobileMenu {primaryMenuItem} />
+              <MobileMenu />
             </div>
           </div>
         </div>

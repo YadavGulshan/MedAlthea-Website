@@ -3,13 +3,16 @@ import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import Button from '@mui/material/Button'
 import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
 import Link from '@mui/material/Link'
 import MenuIcon from '@mui/icons-material/Menu'
 
 type Anchor = 'menu'
-
-export default function MobileMenu(props: { item: string; href: string }) {
+const primaryMenuItem = [
+  { item: 'About', href: '/About' },
+  { item: 'Services', href: '/services' },
+  { item: 'Contact', href: '/contact' },
+]
+export default function MobileMenu() {
   const [state, setState] = React.useState({
     menu: false,
   })
@@ -37,21 +40,12 @@ export default function MobileMenu(props: { item: string; href: string }) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List sx={{ height: '100%' }}>
-        {navList.map((items, index) => (
+        {primaryMenuItem.map((items, index) => (
           <Link
             href={items.href}
             underline="none"
             className="font-regular py-4 px-5 text-lg text-[#1D2B4F] transition duration-300 hover:text-black"
           >
-            {/* <ListItem
-                  button
-                  key={index}
-                  sx={{
-                    alignItems: 'center',
-                    flexDirection: 'column',
-                    fontSize: '24px',
-                  }}
-                > */}
             {items.item}
           </Link>
         ))}
