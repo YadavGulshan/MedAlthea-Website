@@ -1,38 +1,39 @@
 import React from 'react'
-import { useState } from 'react'
 import styles from '../../styles/header.module.css'
-import Box from '@mui/material/Box'
-import Tabs from '@mui/material/Tabs'
-import Tab from '@mui/material/Tab'
 import MobileMenu from './widget/mobilemenu'
-interface LinkTabProps {
-  label?: string
-  href?: string
-}
-function LinkTab(props: LinkTabProps) {
-  return (
-    <Tab
-      component="a"
-      onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
-        event.preventDefault()
-      }}
-      {...props}
-    />
-  )
-}
+import Tabs from '@mui/material/Tabs'
+import Box from '@mui/material/Box'
+import Link from '@mui/material/Link'
 const HeaderComponent = () => {
-  const [value, setValue] = React.useState(0)
-
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue)
-  }
-  const [isVisible, setVisible] = useState(false)
-  const block = isVisible ? '' : 'hidden'
   const primaryMenuItem = [
-    { item: 'About', href: '#' },
-    { item: 'Services', href: '#' },
-    { item: 'Contact', href: '#' },
+    { item: 'About', href: '/About' },
+    { item: 'Services', href: '/services' },
+    { item: 'Contact', href: '/contact' },
   ]
+  const TabsLabel = (lb: string, hr: string) => {
+    const [value, setValue] = React.useState('About')
+
+    const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+      setValue(newValue)
+    }
+
+    return (
+      <Box sx={{ width: '100%' }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="wrapped label tabs example"
+          className="py-4 px-5"
+        >
+          <Link underline="none" href={hr}>
+            <span className="relative p-1 text-lg font-semibold text-[#1D2B4F] transition-all duration-300 after:absolute after:left-0 after:bottom-0 after:hidden after:h-0 after:w-0 after:bg-pink-500 hover:after:block hover:after:h-1 hover:after:w-full">
+              {lb}
+            </span>
+          </Link>
+        </Tabs>
+      </Box>
+    )
+  }
   return (
     <>
       <nav className="bg-white ">
@@ -46,15 +47,9 @@ const HeaderComponent = () => {
               </a>
             </div>
             <div className="hidden items-center space-x-1 md:flex ">
-              {primaryMenuItem.map((item, index) => (
-                <a
-                  key={index}
-                  className="font-regular py-4 px-5 text-xl text-black transition duration-300 hover:text-green-500"
-                  href={item.href}
-                >
-                  {item.item}
-                </a>
-              ))}
+              {primaryMenuItem.map((item, index) =>
+                TabsLabel(item.item, item.href)
+              )}
             </div>
             <div className="hidden items-center space-x-3 md:flex ">
               <a

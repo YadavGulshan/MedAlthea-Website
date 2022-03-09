@@ -3,11 +3,15 @@ import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import Button from '@mui/material/Button'
 import List from '@mui/material/List'
-import ListItem from '@mui/material/ListItem'
-import ListItemText from '@mui/material/ListItemText'
+import Link from '@mui/material/Link'
+import MenuIcon from '@mui/icons-material/Menu'
 
 type Anchor = 'menu'
-
+const primaryMenuItem = [
+  { item: 'About', href: '/About' },
+  { item: 'Services', href: '/services' },
+  { item: 'Contact', href: '/contact' },
+]
 export default function MobileMenu() {
   const [state, setState] = React.useState({
     menu: false,
@@ -31,14 +35,22 @@ export default function MobileMenu() {
     <Box
       sx={{ width: 'auto' }}
       role="presentation"
+      className=" item-center h-48"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
-        {['About', 'Services', 'Contact'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemText primary={text} />
-          </ListItem>
+      <List
+        sx={{ height: '100%' }}
+        className="flex flex-col items-center justify-evenly"
+      >
+        {primaryMenuItem.map((items, index) => (
+          <Link
+            href={items.href}
+            className="text-lg font-semibold text-[#1D2B4F]"
+            underline="none"
+          >
+            {items.item}
+          </Link>
         ))}
       </List>
     </Box>
@@ -48,7 +60,9 @@ export default function MobileMenu() {
     <div>
       {(['menu'] as const).map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>{anchor}</Button>
+          <Button onClick={toggleDrawer(anchor, true)}>
+            <MenuIcon className="text-3xl text-[#1D2B4F]" />
+          </Button>
           <Drawer
             anchor={'top'}
             open={state[anchor]}
