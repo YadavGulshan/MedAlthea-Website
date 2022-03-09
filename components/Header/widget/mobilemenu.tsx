@@ -35,16 +35,19 @@ export default function MobileMenu() {
     <Box
       sx={{ width: 'auto' }}
       role="presentation"
-      className=" item-center h-64"
+      className=" item-center h-48"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List sx={{ height: '100%' }}>
+      <List
+        sx={{ height: '100%' }}
+        className="flex flex-col items-center justify-evenly"
+      >
         {primaryMenuItem.map((items, index) => (
           <Link
             href={items.href}
+            className="text-lg font-semibold text-[#1D2B4F]"
             underline="none"
-            className="font-regular py-4 px-5 text-lg text-[#1D2B4F] transition duration-300 hover:text-black"
           >
             {items.item}
           </Link>

@@ -23,13 +23,12 @@ const HeaderComponent = () => {
           value={value}
           onChange={handleChange}
           aria-label="wrapped label tabs example"
+          className="py-4 px-5"
         >
-          <Link
-            underline="none"
-            href={hr}
-            className="font-regular py-4 px-5 text-lg text-[#1D2B4F] transition duration-300 hover:text-black"
-          >
-            {lb}
+          <Link underline="none" href={hr}>
+            <span className="relative p-1 text-lg font-semibold text-[#1D2B4F] transition-all duration-300 after:absolute after:left-0 after:bottom-0 after:hidden after:h-0 after:w-0 after:bg-pink-500 hover:after:block hover:after:h-1 hover:after:w-full">
+              {lb}
+            </span>
           </Link>
         </Tabs>
       </Box>
