@@ -8,7 +8,6 @@ const Home: NextPage = () => {
     <div>
       <Head>
         <title>MedAlthea</title>
-        
       </Head>
 
       <main>
