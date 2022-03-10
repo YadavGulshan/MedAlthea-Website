@@ -1,6 +1,6 @@
 import React from 'react'
-import style from './intropage.module.css'
 import Image from 'next/image'
+
 const IntroPage = () => {
   return (
     <>
