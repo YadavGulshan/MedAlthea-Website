@@ -1,12 +1,12 @@
 import React from 'react'
-import style from '../../styles/intropage.module.css'
+import style from './intropage.module.css'
 import Image from 'next/image'
 const IntroPage = () => {
   return (
     <>
       <section className="my-2  mx-auto h-fit bg-white xl:max-w-6xl">
         <div className="mx-5 flex h-full flex-col items-center justify-between xl:flex-row">
-          <div className="mx-2 mt-28 mb-24 h-full text-center xl:w-2/3 xl:text-left">
+          <div className="mx-2 mt-28 mb-0 h-full text-center lg:mb-16 xl:w-2/3 xl:text-left">
             <h1 className="py-5 font-Inter text-4xl font-extrabold text-[#1D2B4F] xl:text-5xl ">
               We are providing you the access to all your health care needs.
             </h1>

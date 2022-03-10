@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../../styles/header.module.css'
+import styles from './header.module.css'
 import MobileMenu from './widget/mobilemenu'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'

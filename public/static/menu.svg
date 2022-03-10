@@ -1,11 +1,5 @@
-<svg
-className="h-8 w-8 text-[#1D2B4F]"
-fill="none"
-stroke-linecap="round"
-stroke-linejoin="round"
-strokeWidth="2"
-viewBox="0 0 24 24"
-stroke="currentColor"
->
-<path d="M4 6h16M4 12h16M4 18h16"></path>
+<svg width="42" height="38" viewBox="0 0 42 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19.611 0.725566C20.4812 0.270996 21.5188 0.270997 22.389 0.725567L37.5755 8.65847C38.5658 9.17573 39.1865 10.2004 39.1865 11.3175V26.6825C39.1865 27.7996 38.5658 28.8243 37.5755 29.3415L22.389 37.2744C21.5188 37.729 20.4812 37.729 19.611 37.2744L4.42446 29.3415C3.43424 28.8243 2.81347 27.7996 2.81347 26.6825V11.3175C2.81347 10.2004 3.43424 9.17573 4.42446 8.65847L19.611 0.725566Z" fill="#118B2C"/>
+<rect x="18" y="10" width="6" height="18" fill="white"/>
+<rect x="12" y="22" width="6" height="18" transform="rotate(-90 12 22)" fill="white"/>
 </svg>
