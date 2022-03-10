@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from '../../styles/header.module.css'
 import MobileMenu from './widget/mobilemenu'
-import Tabs from '@mui/material/Tabs'
 import Box from '@mui/material/Box'
 import Link from '@mui/material/Link'
 const HeaderComponent = () => {
@@ -15,9 +14,9 @@ const HeaderComponent = () => {
       <Box sx={{ width: '100%' }} key={index}>
         <div className="py-4 px-5">
           <Link underline="none" href={hr}>
-            <span className="relative  text-lg font-semibold text-[#1D2B4F] transition-all duration-300 after:absolute after:left-0 after:bottom-0 after:hidden after:h-0 after:w-0 after:bg-pink-500 hover:after:block hover:after:h-1 hover:after:w-full">
+            <p className="relative  text-lg font-semibold text-[#1D2B4F] after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-[#0E63F3] after:transition after:duration-500 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100">
               {lb}
-            </span>
+            </p>
           </Link>
         </div>
       </Box>
