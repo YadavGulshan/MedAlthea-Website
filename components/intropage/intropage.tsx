@@ -23,7 +23,7 @@ const IntroPage = () => {
 
           <div className="flex items-center justify-center xl:w-1/3 ">
             <Image
-              className="lg:h-5/12 mb-10 lg:w-5/12 xl:w-full"
+              className=" mb-10 lg:w-5/12 xl:w-full"
               src="/static/doctor.svg"
               alt="Doctor"
               width={500}

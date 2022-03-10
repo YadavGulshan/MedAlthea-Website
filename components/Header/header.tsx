@@ -10,27 +10,16 @@ const HeaderComponent = () => {
     { item: 'Services', href: '/services' },
     { item: 'Contact', href: '/contact' },
   ]
-  const TabsLabel = (lb: string, hr: string) => {
-    const [value, setValue] = React.useState('About')
-
-    const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-      setValue(newValue)
-    }
-
+  const TabsLabel = (lb: string, hr: string, index: number) => {
     return (
-      <Box sx={{ width: '100%' }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="wrapped label tabs example"
-          className="py-4 px-5"
-        >
+      <Box sx={{ width: '100%' }} key={index}>
+        <div className="py-4 px-5">
           <Link underline="none" href={hr}>
-            <span className="relative p-1 text-lg font-semibold text-[#1D2B4F] transition-all duration-300 after:absolute after:left-0 after:bottom-0 after:hidden after:h-0 after:w-0 after:bg-pink-500 hover:after:block hover:after:h-1 hover:after:w-full">
+            <span className="relative  text-lg font-semibold text-[#1D2B4F] transition-all duration-300 after:absolute after:left-0 after:bottom-0 after:hidden after:h-0 after:w-0 after:bg-pink-500 hover:after:block hover:after:h-1 hover:after:w-full">
               {lb}
             </span>
           </Link>
-        </Tabs>
+        </div>
       </Box>
     )
   }
@@ -46,9 +35,9 @@ const HeaderComponent = () => {
                 </span>
               </a>
             </div>
-            <div className="hidden items-center space-x-1 md:flex ">
+            <div className="hidden items-center md:flex ">
               {primaryMenuItem.map((item, index) =>
-                TabsLabel(item.item, item.href)
+                TabsLabel(item.item, item.href, index)
               )}
             </div>
             <div className="hidden items-center space-x-3 md:flex ">
