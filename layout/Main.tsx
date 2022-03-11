@@ -1,11 +1,12 @@
 import Head from 'next/head'
 import HeaderComponent from '../components/Header/header'
+import React from 'react'
 
-const Main = ({ children, title = 'MedAlthea' }) => {
+const Main = ({ children, props = 'MedAlthea' }: any) => {
   return (
     <div className="app-main">
       <Head>
-        <title>{title}</title>
+        <title>{props}</title>
       </Head>
 
       <HeaderComponent />
