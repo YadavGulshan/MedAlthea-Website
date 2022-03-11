@@ -1,22 +1,16 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
 import HeaderComponent from '../components/Header/header'
 import IntroPage from '../components/intropage/intropage'
 import Overview from '../components/Overview/overview'
-
+import Footer from '../components/Footer/footer'
+import Main from '../layout/Main'
 const Home: NextPage = () => {
   return (
-    <div>
-      <Head>
-        <title>MedAlthea</title>
-      </Head>
-
-      <main>
-        <HeaderComponent />
-        <IntroPage />
-        <Overview />
-      </main>
-    </div>
+    <Main>
+      <IntroPage />
+      <Overview />
+      <Footer />
+    </Main>
   )
 }
 
