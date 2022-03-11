@@ -5,8 +5,7 @@ const IntroPage = () => {
   return (
     <>
       <section className="my-2  mx-auto h-fit bg-white xl:max-w-6xl">
-        <div className="mx-10 flex h-full md:flex-col items-center justify-between xl:flex-row flex-col-reverse">
-
+        <div className="mx-10 flex h-full flex-col-reverse items-center justify-between md:flex-col xl:flex-row">
           {/* Title and sub */}
           <div className="mx-2 mt-10 mb-0 h-full max-w-3xl text-center lg:mt-20 lg:mb-16 xl:w-2/3 xl:text-left">
             <h1 className="py-5 font-Inter text-3xl font-extrabold text-[#1D2B4F] sm:text-3xl md:text-6xl ">
