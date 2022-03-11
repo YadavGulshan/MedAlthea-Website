@@ -17,6 +17,7 @@ const secondaryMenuItem = [
   { item: 'Sign Up', href: '/signup' },
   { item: 'Register', href: '/register' },
 ]
+
 export default function MobileMenu() {
   const [state, setState] = React.useState({
     menu: false,
