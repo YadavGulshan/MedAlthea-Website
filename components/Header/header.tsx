@@ -35,26 +35,26 @@ const HeaderComponent = () => {
                 </span>
               </a>
             </div>
-            <div className="hidden items-center md:flex ">
+            <div className="hidden items-center lg:flex ">
               {primaryMenuItem.map((item, index) =>
                 TabsLabel(item.item, item.href, index)
               )}
             </div>
-            <div className="hidden items-center space-x-3 md:flex ">
+            <div className="hidden items-center space-x-3 lg:flex ">
               <a
                 href=""
-                className="rounded py-2 px-2 text-xl font-semibold text-black transition duration-300 "
+                className="rounded py-2 px-2 text-lg font-semibold text-black transition duration-300 "
               >
                 Sign In
               </a>
               <a
                 href=""
-                className="rounded py-2 px-2 text-xl font-semibold text-black transition duration-300 "
+                className="rounded-lg bg-blue-500 py-2 px-4 text-xl font-semibold text-white shadow-lg shadow-blue-500 transition duration-300 "
               >
                 Register
               </a>
             </div>
-            <div className="flex items-center md:hidden">
+            <div className="flex items-center lg:hidden">
               <MobileMenu />
             </div>
           </div>

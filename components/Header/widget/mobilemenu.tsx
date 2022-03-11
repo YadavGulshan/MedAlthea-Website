@@ -5,12 +5,17 @@ import Button from '@mui/material/Button'
 import List from '@mui/material/List'
 import Link from '@mui/material/Link'
 import MenuIcon from '@mui/icons-material/Menu'
+import { Divider, ListItem } from '@mui/material'
 
 type Anchor = 'menu'
 const primaryMenuItem = [
   { item: 'About', href: '/About' },
   { item: 'Services', href: '/services' },
   { item: 'Contact', href: '/contact' },
+]
+const secondaryMenuItem = [
+  { item: 'Sign Up', href: '/signup' },
+  { item: 'Register', href: '/register' },
 ]
 export default function MobileMenu() {
   const [state, setState] = React.useState({
@@ -35,7 +40,7 @@ export default function MobileMenu() {
     <Box
       sx={{ width: 'auto' }}
       role="presentation"
-      className=" item-center h-48"
+      className=" item-center h-full"
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
@@ -50,7 +55,23 @@ export default function MobileMenu() {
             className="text-lg font-semibold text-[#1D2B4F]"
             underline="none"
           >
-            {items.item}
+            <ListItem>{items.item}</ListItem>
+          </Link>
+        ))}
+      </List>
+      <Divider />
+      <List
+        sx={{ height: '100%' }}
+        className="flex flex-col items-center justify-evenly"
+      >
+        {secondaryMenuItem.map((items, index) => (
+          <Link
+            key={index}
+            href={items.href}
+            className="text-lg font-semibold text-[#1D2B4F]"
+            underline="none"
+          >
+            <ListItem>{items.item}</ListItem>
           </Link>
         ))}
       </List>

@@ -5,9 +5,9 @@ const IntroPage = () => {
   return (
     <>
       <section className="my-2  mx-auto h-fit bg-white xl:max-w-6xl">
-        <div className="mx-5 flex h-full flex-col items-center justify-between xl:flex-row">
-          <div className="mx-2 mt-28 mb-0 h-full text-center lg:mb-16 xl:w-2/3 xl:text-left">
-            <h1 className="py-5 font-Inter text-4xl font-extrabold text-[#1D2B4F] xl:text-5xl ">
+        <div className="mx-10 flex h-full flex-col items-center justify-between xl:flex-row">
+          <div className="mx-2 mt-10 mb-0 h-full max-w-3xl text-center lg:mt-20 lg:mb-16 xl:w-2/3 xl:text-left">
+            <h1 className="py-5 font-Inter text-3xl font-extrabold text-[#1D2B4F] sm:text-3xl md:text-6xl ">
               We are providing you the access to all your health care needs.
             </h1>
             <p className="py-5 font-Inter font-medium text-[#1D2B4F] lg:px-32 xl:pl-0 xl:pr-32 xl:text-xl">
@@ -15,7 +15,7 @@ const IntroPage = () => {
               consequuntur quos dolorem ab. Cum qui ut aliquam ut eligendi.
             </p>
             <input
-              className="my-10 rounded-full bg-blue-400 px-[3rem] py-2 text-xl font-bold text-white transition delay-75 duration-300 ease-in-out hover:scale-110 "
+              className="my-10 cursor-pointer rounded-xl bg-blue-400 px-[3rem] py-2 text-xl font-bold text-white shadow-lg shadow-blue-400 transition delay-75 duration-300 ease-in-out "
               type="button"
               value="Join Us"
             />
