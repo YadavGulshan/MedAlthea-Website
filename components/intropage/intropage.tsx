@@ -5,7 +5,9 @@ const IntroPage = () => {
   return (
     <>
       <section className="my-2  mx-auto h-fit bg-white xl:max-w-6xl">
-        <div className="mx-10 flex h-full flex-col items-center justify-between xl:flex-row">
+        <div className="mx-10 flex h-full md:flex-col items-center justify-between xl:flex-row flex-col-reverse">
+
+          {/* Title and sub */}
           <div className="mx-2 mt-10 mb-0 h-full max-w-3xl text-center lg:mt-20 lg:mb-16 xl:w-2/3 xl:text-left">
             <h1 className="py-5 font-Inter text-3xl font-extrabold text-[#1D2B4F] sm:text-3xl md:text-6xl ">
               We are providing you the access to all your health care needs.
@@ -20,7 +22,7 @@ const IntroPage = () => {
               value="Join Us"
             />
           </div>
-
+          {/* Image */}
           <div className="flex items-center justify-center xl:w-1/3 ">
             <Image
               className=" mb-10 lg:w-5/12 xl:w-full"
