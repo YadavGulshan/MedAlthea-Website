@@ -8,7 +8,7 @@ const IntroPage = () => {
         <div className="mx-10 flex h-full flex-col-reverse items-center justify-between md:flex-col xl:flex-row">
           {/* Title and sub */}
           <div className="mx-2 mt-10 mb-0 h-full max-w-3xl text-center lg:mt-20 lg:mb-16 xl:w-2/3 xl:text-left">
-            <h1 className="py-5 font-Inter text-3xl font-extrabold text-[#1D2B4F] sm:text-3xl md:text-6xl ">
+            <h1 className="py-5 font-Inter text-4xl font-extrabold text-[#1D2B4F] sm:text-5xl md:text-6xl ">
               We are providing you the access to all your health care needs.
             </h1>
             <p className="py-5 font-Inter font-medium text-[#1D2B4F] lg:px-32 xl:pl-0 xl:pr-32 xl:text-xl">

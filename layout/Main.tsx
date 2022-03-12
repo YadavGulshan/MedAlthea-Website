@@ -4,7 +4,7 @@ import React from 'react'
 
 const Main = ({ children, props = 'MedAlthea' }: any) => {
   return (
-    <div className="app-main">
+    <>
       <Head>
         <title>{props}</title>
       </Head>
@@ -12,7 +12,7 @@ const Main = ({ children, props = 'MedAlthea' }: any) => {
       <HeaderComponent />
 
       <main>{children}</main>
-    </div>
+    </>
   )
 }
 export default Main

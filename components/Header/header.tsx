@@ -39,12 +39,12 @@ const HeaderComponent = () => {
                 </span>
               </Link>
             </div>
-            <div className="hidden items-center lg:flex ">
+            <div className="hidden items-center md:flex ">
               {primaryMenuItem.map((item, index) =>
                 TabsLabel(item.item, item.href, index)
               )}
             </div>
-            <div className="hidden items-center space-x-3 px-2 lg:flex ">
+            <div className="hidden items-center space-x-3 px-2 md:flex ">
               <Link
                 underline="none"
                 href="/signup"
@@ -59,7 +59,7 @@ const HeaderComponent = () => {
                 Register
               </a>
             </div>
-            <div className="flex items-center lg:hidden">
+            <div className="flex items-center md:hidden">
               <MobileMenu />
             </div>
           </div>
