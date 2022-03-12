@@ -44,7 +44,7 @@ const HeaderComponent = () => {
                 TabsLabel(item.item, item.href, index)
               )}
             </div>
-            <div className="hidden items-center space-x-3 lg:flex ">
+            <div className="hidden items-center space-x-3 px-2 lg:flex ">
               <Link
                 underline="none"
                 href="/signup"
