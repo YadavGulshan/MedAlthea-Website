@@ -29,11 +29,15 @@ const HeaderComponent = () => {
         <div className=" my-2 mx-auto max-w-6xl px-4">
           <div className="flex justify-between">
             <div>
-              <a href="#" className="flex items-center py-4 px-2">
+              <Link
+                underline="none"
+                href="/"
+                className="flex items-center py-4 px-2"
+              >
                 <span className={`font-Russo text-3xl font-[550] text-black `}>
                   MedAlthea
                 </span>
-              </a>
+              </Link>
             </div>
             <div className="hidden items-center lg:flex ">
               {primaryMenuItem.map((item, index) =>
@@ -49,6 +53,7 @@ const HeaderComponent = () => {
                 Sign In
               </Link>
               <Link
+                underline="none"
                 href="/register"
                 className="rounded-lg bg-blue-500 py-2 px-4 text-xl font-semibold text-white shadow-lg shadow-blue-500"
               >
