@@ -1,6 +1,6 @@
 import Section from '../layout/Section'
 import Main from '../layout/Main'
-import { useForm } from 'react-hook-form'
+import { SubmitHandler, useForm } from 'react-hook-form'
 import React, { useState } from 'react'
 import Image from 'next/image'
 import axios from 'axios'
@@ -8,16 +8,26 @@ const Register = () => {
   const {
     register,
     watch,
+    handleSubmit,
     formState: { errors, isValid },
   } = useForm({ mode: 'all' })
 
-  const checkuser = async (username: React.ChangeEvent<HTMLInputElement>) => {
-    // const serverUrl = `http://127.0.0.1:8000/api/register/search/?username=${username.target.value}`
-    // const response = await axios.get(serverUrl)
-    // console.log(response)
-  }
-
   const [formStep, setFormStep] = useState(0)
+  const [available, setAvailable] = useState(false)
+  const handleChange = async (event: string) => {
+    const serverUrl = `http://127.0.0.1:8000/api/register/search/?username=${event}`
+    const response = window
+      .fetch(serverUrl, { method: 'GET' })
+      .then((response) => {
+        if (response.status === 200) {
+          setAvailable(true)
+          console.log(available)
+        } else {
+          setAvailable(false)
+        }
+      })
+    console.log(response)
+  }
   return (
     <Main>
       <Section>
@@ -39,13 +49,14 @@ const Register = () => {
                 </div>
                 {/* Input for username */}
                 <input
-                  onChange={(e) => {
-                    e.target.value.length > 3 && checkuser(e)
-                  }}
                   className="border-grey-300 my-4 h-14 w-full rounded-lg border-2 border-solid px-6 pl-10 shadow-md outline-none transition duration-300 focus:border-blue-300 "
                   type="text"
                   autoComplete="off"
                   placeholder="Username"
+                  name="username"
+                  onChange={(e) => {
+                    e.target.value.length > 3 && handleChange(e.target.value)
+                  }}
                 />
               </div>
               <div className="relative h-fit w-full rounded-lg">
