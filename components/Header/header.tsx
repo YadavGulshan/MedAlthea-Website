@@ -29,32 +29,37 @@ const HeaderComponent = () => {
         <div className=" my-2 mx-auto max-w-6xl px-4">
           <div className="flex justify-between">
             <div>
-              <a href="#" className="flex items-center py-4 px-2">
+              <Link
+                underline="none"
+                href="/"
+                className="flex items-center py-4 px-2"
+              >
                 <span className={`font-Russo text-3xl font-[550] text-black `}>
                   MedAlthea
                 </span>
-              </a>
+              </Link>
             </div>
-            <div className="hidden items-center lg:flex ">
+            <div className="hidden items-center md:flex ">
               {primaryMenuItem.map((item, index) =>
                 TabsLabel(item.item, item.href, index)
               )}
             </div>
-            <div className="hidden items-center space-x-3 lg:flex ">
-              <a
+            <div className="hidden items-center space-x-3 px-2 md:flex ">
+              <Link
+                underline="none"
                 href="/signup"
                 className="rounded py-2 px-2 text-lg font-semibold text-black transition duration-300 "
               >
                 Sign In
-              </a>
+              </Link>
               <a
                 href="/register"
-                className="rounded-lg bg-blue-500 py-2 px-4 text-xl font-semibold text-white shadow-lg shadow-blue-500 transition duration-300 "
+                className="rounded-lg bg-blue-500 py-2 px-4 text-xl font-semibold text-white shadow-lg shadow-blue-500"
               >
                 Register
               </a>
             </div>
-            <div className="flex items-center lg:hidden">
+            <div className="flex items-center md:hidden">
               <MobileMenu />
             </div>
           </div>
