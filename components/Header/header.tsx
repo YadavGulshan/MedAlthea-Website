@@ -55,7 +55,7 @@ const HeaderComponent = () => {
               <Link
                 underline="none"
                 href="/register"
-                className="rounded-lg bg-blue-500 py-2 px-4 text-xl font-semibold text-white shadow-lg shadow-blue-500"
+                className="rounded-lg bg-blue-500 py-2 px-4 text-xl font-semibold !text-white shadow-lg shadow-blue-500"
               >
                 Register
               </Link>
