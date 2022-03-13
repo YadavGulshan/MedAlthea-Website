@@ -29,17 +29,13 @@ const HeaderComponent = () => {
         <div className=" my-2 mx-auto max-w-6xl px-4">
           <div className="flex justify-between">
             <div>
-              <Link
-                underline="none"
-                href="/"
-                className="flex items-center py-4 px-2"
-              >
+              <a href="#" className="flex items-center py-4 px-2">
                 <span className={`font-Russo text-3xl font-[550] text-black `}>
                   MedAlthea
                 </span>
-              </Link>
+              </a>
             </div>
-            <div className="hidden items-center md:flex ">
+            <div className="hidden items-center lg:flex ">
               {primaryMenuItem.map((item, index) =>
                 TabsLabel(item.item, item.href, index)
               )}
@@ -52,12 +48,12 @@ const HeaderComponent = () => {
               >
                 Sign In
               </Link>
-              <a
+              <Link
                 href="/register"
                 className="rounded-lg bg-blue-500 py-2 px-4 text-xl font-semibold text-white shadow-lg shadow-blue-500"
               >
                 Register
-              </a>
+              </Link>
             </div>
             <div className="flex items-center md:hidden">
               <MobileMenu />
