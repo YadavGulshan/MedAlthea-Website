@@ -12,10 +12,9 @@ const Register = () => {
   } = useForm({ mode: 'all' })
 
   const checkuser = async (username: React.ChangeEvent<HTMLInputElement>) => {
-    const serverUrl = `http://127.0.0.1:8000/api/register/search/?username=${username.target.value}`
-
-    const response = await axios.get(serverUrl)
-    console.log(response)
+    // const serverUrl = `http://127.0.0.1:8000/api/register/search/?username=${username.target.value}`
+    // const response = await axios.get(serverUrl)
+    // console.log(response)
   }
 
   const [formStep, setFormStep] = useState(0)
