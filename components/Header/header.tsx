@@ -34,7 +34,7 @@ const HeaderComponent = () => {
                 href="/"
                 className="flex items-center py-4 px-2"
               >
-                <span className={`font-Russo text-3xl font-[550] text-black `}>
+                <span className={`text-black font-Russo text-3xl font-[550] `}>
                   MedAlthea
                 </span>
               </Link>
@@ -48,14 +48,14 @@ const HeaderComponent = () => {
               <Link
                 underline="none"
                 href="/signup"
-                className="rounded py-2 px-2 text-lg font-semibold text-black transition duration-300 "
+                className="text-black rounded py-2 px-2 text-lg font-semibold transition duration-300 "
               >
                 Sign In
               </Link>
               <Link
                 underline="none"
                 href="/register"
-                className="rounded-lg bg-blue-500 py-2 px-4 text-xl font-semibold !text-white shadow-lg shadow-blue-500"
+                className="bg-blue-500 !text-white shadow-blue-500 rounded-lg py-2 px-4 text-xl font-semibold shadow-lg"
               >
                 Register
               </Link>

@@ -10,7 +10,7 @@ module.exports = {
     },
     extend: {},
     colors: {
-      'green': {
+      green: {
         100: '#cffcc7',
         200: '#adfaa2',
         300: '#83f677',
@@ -21,6 +21,7 @@ module.exports = {
         800: '#00b200',
         900: '#008e00',
       },
+    },
+    plugins: [],
   },
-  plugins: [],
-  }}
+}
