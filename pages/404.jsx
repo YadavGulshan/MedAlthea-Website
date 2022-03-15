@@ -11,7 +11,7 @@ const ErrorPage = () => (
         <Link
           href="/"
           underline="none"
-          className="bg-blue-500 text-white shadow-blue-500 m-10 rounded-lg py-2 px-4 text-xl font-semibold shadow-lg"
+          className="m-10 rounded-lg bg-blue-500 py-2 px-4 text-xl font-semibold !text-white shadow-lg shadow-blue-500"
         >
           Go to home
         </Link>
