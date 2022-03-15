@@ -225,7 +225,7 @@ const Register = () => {
                 <Link
                   underline="none"
                   className="my-2 rounded-lg bg-blue-500 py-2 px-4 font-bold !text-white shadow-xl shadow-blue-400"
-                  href="/register"
+                  href="/signup"
                 >
                   Login now
                 </Link>

@@ -37,7 +37,7 @@ const SignUp = () => {
                   />
                 </div>
                 <input
-                  className="border-grey-300 my-4 h-14 w-full rounded-lg border-2 border-solid px-6 shadow-md outline-none transition duration-300 focus:border-blue-300 md:px-10"
+                  className="border-grey-300 my-4 h-14 w-full rounded-lg border-2 border-solid px-6 pl-10 shadow-md outline-none transition duration-300 focus:border-blue-300"
                   type="password"
                   autoComplete="off"
                   placeholder="Password"
