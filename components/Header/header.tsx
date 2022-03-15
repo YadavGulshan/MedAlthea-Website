@@ -48,7 +48,7 @@ const HeaderComponent = () => {
               <Link
                 underline="none"
                 href="/signup"
-                className="!text-black rounded py-2 px-2 text-lg font-semibold transition duration-300"
+                className="text-black rounded py-2 px-2 text-lg font-semibold transition duration-300 "
               >
                 Sign In
               </Link>

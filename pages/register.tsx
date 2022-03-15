@@ -5,7 +5,6 @@ import * as Yup from 'yup'
 import Image from 'next/image'
 import Main from '../layout/Main'
 import Section from '../layout/Section'
-import Link from '@mui/material/Link'
 
 const Register = () => {
   const formSchema = Yup.object().shape({
@@ -178,7 +177,7 @@ const Register = () => {
                 <input
                   className={`${
                     errors.password
-                      ? 'border-pink-600 text-pink-600 focus:border-pink-600'
+                      ? 'text-pink-600 focus:border-pink-600'
                       : 'focus:border-blue-300'
                   } border-grey-300 my-4 h-14 w-full rounded-lg border-2 border-solid px-6 shadow-md outline-none transition duration-300 `}
                   type="password"
@@ -195,11 +194,7 @@ const Register = () => {
               <div className=" h-fit w-full rounded-lg">
                 {/* input for confirm password */}
                 <input
-                  className={`${
-                    errors.password
-                      ? 'border-pink-600 text-pink-600 focus:!border-pink-600'
-                      : 'focus:border-blue-300'
-                  } border-grey-300 my-4 h-14 w-full rounded-lg border-2 border-solid px-6 shadow-md outline-none transition duration-300 focus:border-blue-300`}
+                  className="border-grey-300 my-4 h-14 w-full rounded-lg border-2 border-solid px-6 shadow-md outline-none transition duration-300 focus:border-blue-300 "
                   type="password"
                   autoComplete="off"
                   placeholder="confirm Password"
@@ -219,16 +214,6 @@ const Register = () => {
                   className="my-4 h-14 w-full rounded-lg border-2 border-none bg-blue-500 px-6 font-bold text-white outline-none transition duration-300 hover:border-blue-300 hover:shadow-xl hover:shadow-blue-400 disabled:bg-gray-300 disabled:hover:shadow-none "
                   value="Register"
                 />
-              </div>
-              <div className="my-2 flex flex-col items-center justify-evenly font-Inter font-medium sm:flex-row">
-                <p>Already registered?</p>
-                <Link
-                  underline="none"
-                  className="my-2 rounded-lg bg-blue-500 py-2 px-4 font-bold !text-white shadow-xl shadow-blue-400"
-                  href="/register"
-                >
-                  Login now
-                </Link>
               </div>
             </form>
           </div>

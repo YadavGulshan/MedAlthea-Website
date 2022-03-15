@@ -54,7 +54,7 @@ const SignUp = () => {
                 <p>Not have an account yet?</p>
                 <Link
                   underline="none"
-                  className="bg-blue-500 !text-white shadow-blue-400 my-2 rounded-lg py-2 px-4 font-bold shadow-xl"
+                  className="bg-blue-500 text-white shadow-blue-400 my-2 rounded-lg py-2 px-4 font-bold shadow-xl"
                   href="/register"
                 >
                   Register now
