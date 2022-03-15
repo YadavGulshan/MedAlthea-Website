@@ -2,10 +2,10 @@ import { Link } from '@mui/material'
 import Main from '../layout/Main'
 const ErrorPage = () => (
   <Main>
-    <section className="h-[88vh] bg-white">
+    <section className="bg-white h-[88vh]">
       <div className="my-2 mx-auto flex h-full w-2/3 max-w-6xl flex-col items-center justify-center px-4">
-        <h1 className="text-8xl font-bold text-zinc-700">Error 404</h1>
-        <p className="text-lg font-semibold text-neutral-400">
+        <h1 className="text-zinc-700 text-8xl font-bold">Error 404</h1>
+        <p className="text-neutral-400 text-lg font-semibold">
           Woops. Looks like this page doesn&apos;t exist
         </p>
         <Link

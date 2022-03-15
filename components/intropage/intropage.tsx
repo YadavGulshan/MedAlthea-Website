@@ -4,7 +4,7 @@ import Image from 'next/image'
 const IntroPage = () => {
   return (
     <>
-      <section className="my-2  mx-auto h-fit bg-white xl:max-w-6xl">
+      <section className="bg-white  my-2 mx-auto h-fit xl:max-w-6xl">
         <div className="mx-10 flex h-full flex-col-reverse items-center justify-between md:flex-col xl:flex-row">
           {/* Title and sub */}
           <div className="mx-2 mt-10 mb-0 h-full max-w-3xl text-center lg:mt-20 lg:mb-16 xl:w-2/3 xl:text-left">
@@ -16,7 +16,7 @@ const IntroPage = () => {
               consequuntur quos dolorem ab. Cum qui ut aliquam ut eligendi.
             </p>
             <input
-              className="my-10 cursor-pointer rounded-xl bg-blue-400 px-[3rem] py-2 text-xl font-bold text-white shadow-lg shadow-blue-400 transition delay-75 duration-300 ease-in-out "
+              className="bg-blue-400 text-white shadow-blue-400 my-10 cursor-pointer rounded-xl px-[3rem] py-2 text-xl font-bold shadow-lg transition delay-75 duration-300 ease-in-out "
               type="button"
               value="Join Us"
             />
