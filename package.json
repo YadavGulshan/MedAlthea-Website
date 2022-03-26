@@ -42,5 +42,11 @@
     "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}": [
       "prettier --write"
     ]
-  }
+  },
+  "name": "MedAlthea-Website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:YadavGulshan/MedAlthea-Website.git",
+  "author": "ChiragPadyal <freakstar03@gmail.com>",
+  "license": "MIT"
 }

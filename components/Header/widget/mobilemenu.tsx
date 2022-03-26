@@ -4,6 +4,7 @@ import Drawer from '@mui/material/Drawer'
 import Button from '@mui/material/Button'
 import List from '@mui/material/List'
 import Link from '@mui/material/Link'
+import Nlink from 'next/link'
 import MenuIcon from '@mui/icons-material/Menu'
 import { Divider, ListItem } from '@mui/material'
 
@@ -52,11 +53,10 @@ export default function MobileMenu() {
         {primaryMenuItem.map((items, index) => (
           <Link
             key={index}
-            href={items.href}
             className="text-lg font-semibold text-[#1D2B4F]"
             underline="none"
           >
-            <ListItem>{items.item}</ListItem>
+            <Nlink href={items.href}><ListItem>{items.item}</ListItem></Nlink>
           </Link>
         ))}
       </List>
@@ -68,11 +68,11 @@ export default function MobileMenu() {
         {secondaryMenuItem.map((items, index) => (
           <Link
             key={index}
-            href={items.href}
             className="text-lg font-semibold text-[#1D2B4F]"
             underline="none"
+            href={items.href}
           >
-            <ListItem>{items.item}</ListItem>
+            <Nlink href={items.href}><ListItem>{items.item}</ListItem></Nlink>
           </Link>
         ))}
       </List>

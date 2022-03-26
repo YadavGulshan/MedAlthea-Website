@@ -5,6 +5,8 @@ import * as Yup from 'yup'
 import Main from '../layout/Main'
 import Section from '../layout/Section'
 import Link from '@mui/material/Link'
+import Nlink from 'next/link'
+
 import { checkUser } from '../utils/serverfunction/checkuser'
 import { registerUser } from '../utils/serverfunction/register_login'
 
@@ -239,9 +241,8 @@ const Register = () => {
                 <Link
                   underline="none"
                   className="my-2 rounded-lg bg-blue-500 py-2 px-4 font-bold !text-white shadow-xl shadow-blue-400"
-                  href="/signup"
                 >
-                  Login now
+                  <Nlink href="/signup">Login now</Nlink>
                 </Link>
               </div>
             </form>

@@ -1,6 +1,8 @@
 import Link from '@mui/material/Link'
 import Main from '../layout/Main'
 import Image from 'next/image'
+import Nlink from 'next/link'
+
 const SignUp = () => {
   return (
     <Main>
@@ -55,9 +57,8 @@ const SignUp = () => {
                 <Link
                   underline="none"
                   className="my-2 rounded-lg bg-blue-500 py-2 px-4 font-bold !text-white shadow-xl shadow-blue-400"
-                  href="/register"
                 >
-                  Register now
+                  <Nlink href="/register">Register now</Nlink>
                 </Link>
               </div>
             </form>
