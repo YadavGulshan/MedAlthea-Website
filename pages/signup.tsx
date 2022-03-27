@@ -1,7 +1,6 @@
-import Link from '@mui/material/Link'
 import Main from '../layout/Main'
 import Image from 'next/image'
-import Nlink from 'next/link'
+import Nlink from 'next/Link'
 
 const SignUp = () => {
   return (
@@ -54,12 +53,11 @@ const SignUp = () => {
               </div>
               <div className="my-5 flex flex-col items-center justify-evenly font-Inter font-medium sm:flex-row">
                 <p>Not have an account yet?</p>
-                <Link
-                  underline="none"
+                <div
                   className="my-2 rounded-lg bg-blue-500 py-2 px-4 font-bold !text-white shadow-xl shadow-blue-400"
                 >
                   <Nlink href="/register">Register now</Nlink>
-                </Link>
+                </div>
               </div>
             </form>
           </div>

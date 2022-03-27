@@ -3,7 +3,6 @@ import Box from '@mui/material/Box'
 import Drawer from '@mui/material/Drawer'
 import Button from '@mui/material/Button'
 import List from '@mui/material/List'
-import Link from '@mui/material/Link'
 import Nlink from 'next/link'
 import MenuIcon from '@mui/icons-material/Menu'
 import { Divider, ListItem } from '@mui/material'
@@ -66,14 +65,14 @@ export default function MobileMenu() {
         className="flex flex-col items-center justify-evenly"
       >
         {secondaryMenuItem.map((items, index) => (
-          <Link
+          <div
             key={index}
             className="text-lg font-semibold text-[#1D2B4F]"
             underline="none"
             href={items.href}
           >
             <Nlink href={items.href}><ListItem>{items.item}</ListItem></Nlink>
-          </Link>
+          </div>
         ))}
       </List>
     </Box>

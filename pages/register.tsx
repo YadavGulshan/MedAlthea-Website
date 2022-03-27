@@ -4,7 +4,6 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import * as Yup from 'yup'
 import Main from '../layout/Main'
 import Section from '../layout/Section'
-import Link from '@mui/material/Link'
 import Nlink from 'next/link'
 
 import { checkUser } from '../utils/serverfunction/checkuser'
@@ -41,7 +40,6 @@ const Register = () => {
 
   const [available, setAvailable] = useState(false)
   const [isDirty, setIsDirty] = useState(false)
-  const [isEmpty, setError] = useState(false)
   const [unique, setUnique] = useState(true)
   const handleChange = async (event: string) => {
     const response = checkUser(event)
@@ -238,12 +236,9 @@ const Register = () => {
               </div>
               <div className="my-2 flex flex-col items-center justify-evenly font-Inter font-medium sm:flex-row">
                 <p>Already registered?</p>
-                <Link
-                  underline="none"
-                  className="my-2 rounded-lg bg-blue-500 py-2 px-4 font-bold !text-white shadow-xl shadow-blue-400"
-                >
+                <div className="my-2 rounded-lg bg-blue-500 py-2 px-4 font-bold !text-white shadow-xl shadow-blue-400">
                   <Nlink href="/signup">Login now</Nlink>
-                </Link>
+                </div>
               </div>
             </form>
           </div>
