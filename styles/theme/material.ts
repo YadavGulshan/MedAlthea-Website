@@ -1,4 +1,5 @@
-import { createTheme } from '@mui/material/styles'
+/* eslint-disable no-unused-vars */
+import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
   palette: {
@@ -15,4 +16,4 @@ const theme = createTheme({
     //   contrastText: '#000',
     // },
   },
-})
+});

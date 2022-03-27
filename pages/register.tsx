@@ -1,15 +1,15 @@
-import React, { useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { yupResolver } from '@hookform/resolvers/yup'
-import * as Yup from 'yup'
-import Main from '../layout/Main'
-import Section from '../layout/Section'
-import Nlink from 'next/link'
+import React, { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { yupResolver } from '@hookform/resolvers/yup';
+import Yup from 'yup';
+import Link from 'next/link';
+import Main from '../layout/Main';
+import Section from '../layout/Section';
 
-import { checkUser } from '../utils/serverfunction/checkuser'
-import { registerUser } from '../utils/serverfunction/register_login'
+import { checkUser } from '../utils/serverfunction/checkuser';
+import { registerUser } from '../utils/serverfunction/register_login';
 
-const Register = () => {
+function Register() {
   const formSchema = Yup.object().shape({
     username: Yup.string().required('User Name required'),
     first_name: Yup.string().required('This field is required'),
@@ -17,53 +17,53 @@ const Register = () => {
     email: Yup.string()
       .required('This field is required')
       .matches(
-        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-        'Enter a valid Enter'
+        /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+        'Enter a valid Enter',
       ),
     password: Yup.string()
       .required('Password is mendatory')
       .min(8, 'Password must be at 8 char long')
       .matches(
         /^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/,
-        'password must contain number and characters'
+        'password must contain number and characters',
       ),
     password2: Yup.string()
       .required('Password is mendatory')
       .oneOf([Yup.ref('password')], 'Passwords does not match'),
-  })
+  });
   const {
     register,
     handleSubmit,
     getValues,
     formState: { errors, isValid },
-  } = useForm({ mode: 'all', resolver: yupResolver(formSchema) })
+  } = useForm({ mode: 'all', resolver: yupResolver(formSchema) });
 
-  const [available, setAvailable] = useState(false)
-  const [isDirty, setIsDirty] = useState(false)
-  const [unique, setUnique] = useState(true)
+  const [available, setAvailable] = useState(false);
+  const [isDirty, setIsDirty] = useState(false);
+  const [unique, setUnique] = useState(true);
   const handleChange = async (event: string) => {
-    const response = checkUser(event)
+    const response = checkUser(event);
     if ((await response) === true) {
-      setAvailable(true)
-      setIsDirty(true)
+      setAvailable(true);
+      setIsDirty(true);
     } else {
-      setAvailable(false)
+      setAvailable(false);
     }
-  }
+  };
 
-  const onSubmit = async (data: any) => {
-    const response = await registerUser(getValues())
+  const onSubmit = async () => {
+    const response = await registerUser(getValues());
     if (response?.status === 200) {
-      setUnique(true)
+      setUnique(true);
     } else if (response?.status === 400) {
-      const error = await response.json()
+      const error = await response.json();
       if (error?.email) {
-        setUnique(false)
+        setUnique(false);
       }
     } else {
-      console.log(response)
+      console.log(response);
     }
-  }
+  };
 
   return (
     <Main>
@@ -161,10 +161,15 @@ const Register = () => {
                   autoComplete="off"
                   placeholder="Username"
                   {...register('username', {
-                    onChange: (e) => {
-                      e.target.value.length > 3
-                        ? handleChange(e.target.value)
-                        : setIsDirty(false)
+                    onChange: e => {
+                      // e.target.value.length > 3
+                      //   ? handleChange(e.target.value)
+                      //   : setIsDirty(false);
+                      if (e.target.value.length > 3) {
+                        handleChange(e.target.value);
+                      } else {
+                        setIsDirty(false);
+                      }
                     },
                   })}
                 />
@@ -237,7 +242,7 @@ const Register = () => {
               <div className="my-2 flex flex-col items-center justify-evenly font-Inter font-medium sm:flex-row">
                 <p>Already registered?</p>
                 <div className="my-2 rounded-lg bg-blue-500 py-2 px-4 font-bold !text-white shadow-xl shadow-blue-400">
-                  <Nlink href="/signup">Login now</Nlink>
+                  <Link href="/signup">Login now</Link>
                 </div>
               </div>
             </form>
@@ -245,6 +250,6 @@ const Register = () => {
         </div>
       </Section>
     </Main>
-  )
+  );
 }
-export default Register
+export default Register;

@@ -1,8 +1,8 @@
-import Head from 'next/head'
-import HeaderComponent from '../components/Header/header'
-import React from 'react'
+import Head from 'next/head';
+import React from 'react';
+import HeaderComponent from '../components/Header/header';
 
-const Main = ({ children, props = 'MedAlthea' }: any) => {
+function Main({ children, props = 'MedAlthea' }: any) {
   return (
     <>
       <Head>
@@ -13,6 +13,6 @@ const Main = ({ children, props = 'MedAlthea' }: any) => {
 
       <main>{children}</main>
     </>
-  )
+  );
 }
-export default Main
+export default Main;

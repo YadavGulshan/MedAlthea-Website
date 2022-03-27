@@ -1,8 +1,8 @@
-import Main from '../layout/Main'
-import Image from 'next/image'
-import Nlink from 'next/Link'
+import Image from 'next/image';
+import Link from 'next/link';
+import Main from '../layout/Main';
 
-const SignUp = () => {
+function SignUp() {
   return (
     <Main>
       <section className="h-[88vh] select-none">
@@ -15,8 +15,8 @@ const SignUp = () => {
               <div className="relative h-fit w-full rounded-lg">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                   <Image
-                    width={'20px'}
-                    height={'20px'}
+                    width="20px"
+                    height="20px"
                     src="/static/profile.svg"
                     alt="profile"
                   />
@@ -31,8 +31,8 @@ const SignUp = () => {
               <div className="relative h-fit w-full rounded-lg">
                 <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
                   <Image
-                    width={'20px'}
-                    height={'20px'}
+                    width="20px"
+                    height="20px"
                     src="/static/key.svg"
                     alt="profile"
                   />
@@ -53,10 +53,8 @@ const SignUp = () => {
               </div>
               <div className="my-5 flex flex-col items-center justify-evenly font-Inter font-medium sm:flex-row">
                 <p>Not have an account yet?</p>
-                <div
-                  className="my-2 rounded-lg bg-blue-500 py-2 px-4 font-bold !text-white shadow-xl shadow-blue-400"
-                >
-                  <Nlink href="/register">Register now</Nlink>
+                <div className="my-2 rounded-lg bg-blue-500 py-2 px-4 font-bold !text-white shadow-xl shadow-blue-400">
+                  <Link href="/register">Register now</Link>
                 </div>
               </div>
             </form>
@@ -64,6 +62,6 @@ const SignUp = () => {
         </div>
       </section>
     </Main>
-  )
+  );
 }
-export default SignUp
+export default SignUp;

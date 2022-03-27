@@ -1,27 +1,27 @@
-import * as React from 'react'
-import Box from '@mui/material/Box'
-import Drawer from '@mui/material/Drawer'
-import Button from '@mui/material/Button'
-import List from '@mui/material/List'
-import Nlink from 'next/link'
-import MenuIcon from '@mui/icons-material/Menu'
-import { Divider, ListItem } from '@mui/material'
+import React from 'react';
+import Box from '@mui/material/Box';
+import Drawer from '@mui/material/Drawer';
+import Button from '@mui/material/Button';
+import List from '@mui/material/List';
+import Link from 'next/link';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Divider, ListItem } from '@mui/material';
 
-type Anchor = 'menu'
+type Anchor = 'menu';
 const primaryMenuItem = [
   { item: 'About', href: '/About' },
   { item: 'Services', href: '/services' },
   { item: 'Contact', href: '/contact' },
-]
+];
 const secondaryMenuItem = [
   { item: 'Sign Up', href: '/signup' },
   { item: 'Register', href: '/register' },
-]
+];
 
 export default function MobileMenu() {
   const [state, setState] = React.useState({
     menu: false,
-  })
+  });
 
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
@@ -31,11 +31,11 @@ export default function MobileMenu() {
         ((event as React.KeyboardEvent).key === 'Tab' ||
           (event as React.KeyboardEvent).key === 'Shift')
       ) {
-        return
+        return;
       }
 
-      setState({ ...state, [anchor]: open })
-    }
+      setState({ ...state, [anchor]: open });
+    };
 
   const list = (anchor: Anchor) => (
     <Box
@@ -49,14 +49,13 @@ export default function MobileMenu() {
         sx={{ height: '100%' }}
         className="flex flex-col items-center justify-evenly"
       >
-        {primaryMenuItem.map((items, index) => (
-          <Link
-            key={index}
-            className="text-lg font-semibold text-[#1D2B4F]"
-            underline="none"
-          >
-            <Nlink href={items.href}><ListItem>{items.item}</ListItem></Nlink>
-          </Link>
+        {/* TODO: Potential point of failure */}
+        {primaryMenuItem.map(items => (
+          <p key={items.href} className="text-lg font-semibold text-[#1D2B4F]">
+            <Link href={items.href} passHref>
+              <ListItem>{items.item}</ListItem>
+            </Link>
+          </p>
         ))}
       </List>
       <Divider />
@@ -64,29 +63,30 @@ export default function MobileMenu() {
         sx={{ height: '100%' }}
         className="flex flex-col items-center justify-evenly"
       >
-        {secondaryMenuItem.map((items, index) => (
+        {/* TODO: Potential point of failure */}
+        {secondaryMenuItem.map(items => (
           <div
-            key={index}
+            key={items.href}
             className="text-lg font-semibold text-[#1D2B4F]"
-            underline="none"
-            href={items.href}
           >
-            <Nlink href={items.href}><ListItem>{items.item}</ListItem></Nlink>
+            <Link href={items.href} passHref>
+              <ListItem>{items.item}</ListItem>
+            </Link>
           </div>
         ))}
       </List>
     </Box>
-  )
+  );
 
   return (
     <div>
-      {(['menu'] as const).map((anchor) => (
+      {(['menu'] as const).map(anchor => (
         <React.Fragment key={anchor}>
           <Button onClick={toggleDrawer(anchor, true)}>
             <MenuIcon className="text-3xl text-[#1D2B4F]" />
           </Button>
           <Drawer
-            anchor={'top'}
+            anchor="top"
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
           >
@@ -95,5 +95,5 @@ export default function MobileMenu() {
         </React.Fragment>
       ))}
     </div>
-  )
+  );
 }
