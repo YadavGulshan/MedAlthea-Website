@@ -28,6 +28,7 @@
     "operator-linebreak": "off",
     "arrow-parens": "off",
     "object-curly-newline": "off",
+    "indent": "off",
     "react/jsx-filename-extension": [
       "warn",
       {
