@@ -25,6 +25,9 @@
     "react/react-in-jsx-scope": "off",
     "implicit-arrow-linebreak": "off",
     "no-nested-ternary": "off",
+    "operator-linebreak": "off",
+    "arrow-parens": "off",
+    "object-curly-newline": "off",
     "react/jsx-filename-extension": [
       "warn",
       {
