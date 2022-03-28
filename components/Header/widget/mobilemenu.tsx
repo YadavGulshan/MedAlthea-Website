@@ -9,7 +9,7 @@ import { Divider, ListItem } from '@mui/material';
 
 type Anchor = 'menu';
 const primaryMenuItem = [
-  { item: 'About', href: '/About' },
+  { item: 'About', href: '/about' },
   { item: 'Services', href: '/services' },
   { item: 'Contact', href: '/contact' },
 ];

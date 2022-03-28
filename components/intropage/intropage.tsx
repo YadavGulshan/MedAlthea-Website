@@ -15,7 +15,7 @@ function IntroPage() {
             consequuntur quos dolorem ab. Cum qui ut aliquam ut eligendi.
           </p>
           <input
-            className="my-10 cursor-pointer rounded-xl bg-blue-400 px-[3rem] py-2 text-xl font-bold text-white shadow-lg shadow-blue-400 transition delay-75 duration-300 ease-in-out "
+            className="my-10 cursor-pointer rounded-xl bg-blue-400 px-[3rem] py-2 text-xl font-bold text-white shadow-lg shadow-blue-400 "
             type="button"
             value="Join Us"
           />
