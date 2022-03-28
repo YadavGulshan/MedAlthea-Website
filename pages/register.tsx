@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
-import Yup from 'yup';
+import * as Yup from 'yup';
 import Link from 'next/link';
 import Main from '../layout/Main';
 import Section from '../layout/Section';
@@ -24,7 +24,7 @@ function Register() {
       .required('Password is mendatory')
       .min(8, 'Password must be at 8 char long')
       .matches(
-        /^(?=.*[0-9])(?=.*[a-zA-Z])([a-zA-Z0-9]+)$/,
+        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
         'password must contain number and characters',
       ),
     password2: Yup.string()
@@ -162,6 +162,7 @@ function Register() {
                   placeholder="Username"
                   {...register('username', {
                     onChange: e => {
+                      console.log(e);
                       // e.target.value.length > 3
                       //   ? handleChange(e.target.value)
                       //   : setIsDirty(false);
