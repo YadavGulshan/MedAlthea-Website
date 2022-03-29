@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import Link from 'next/link';
 import Main from '../layout/Main';
-import Section from '../layout/Section';
+// import Section from '../layout/Section';
 
 import { checkUser } from '../utils/serverfunction/checkuser';
 import { registerUser } from '../utils/serverfunction/register_login';
@@ -67,7 +67,7 @@ function Register() {
 
   return (
     <Main>
-      <Section>
+      <section className="my-10 mx-auto bg-white  xl:max-w-6xl">
         <div className="my-2 mx-auto flex h-full w-full max-w-6xl flex-col items-center justify-center px-4 md:w-3/4">
           <div className="mx-10 w-full rounded-2xl p-5 pt-10 shadow-2xl shadow-blue-500 sm:w-[500px]">
             {/* Heading */}
@@ -249,7 +249,7 @@ function Register() {
             </form>
           </div>
         </div>
-      </Section>
+      </section>
     </Main>
   );
 }
