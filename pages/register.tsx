@@ -22,10 +22,9 @@ function Register() {
       ),
     password: Yup.string()
       .required('Password is mendatory')
-      .min(8, 'Password must be at 8 char long')
       .matches(
-        /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
-        'password must contain number and characters',
+        /^.*(?=.{8,})((?=.*[!@#$%^&*()\-_=+{};:,<.>]){1})((?=.*[a-z]){1})((?=.*[A-Z]){1}).*$/,
+        'Password must contain at least 8 characters, one uppercase, one number and one special case character',
       ),
     password2: Yup.string()
       .required('Password is mendatory')

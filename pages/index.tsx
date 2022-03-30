@@ -1,10 +1,9 @@
-import type { NextPage } from 'next';
 import IntroPage from '../components/intropage/intropage';
 import Overview from '../components/Overview/overview';
 import Footer from '../components/Footer/footer';
 import Main from '../layout/Main';
 
-const Home: NextPage = () => {
+function Home() {
   return (
     <Main>
       <IntroPage />
@@ -12,5 +11,5 @@ const Home: NextPage = () => {
       <Footer />
     </Main>
   );
-};
+}
 export default Home;
