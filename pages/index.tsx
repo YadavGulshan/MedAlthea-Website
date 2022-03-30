@@ -12,5 +12,4 @@ function Home() {
     </Main>
   );
 }
-
 export default Home;

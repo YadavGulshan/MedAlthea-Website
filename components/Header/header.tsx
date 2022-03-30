@@ -5,7 +5,7 @@ import MobileMenu from './widget/mobilemenu';
 
 function HeaderComponent() {
   const primaryMenuItem = [
-    { item: 'About', href: '/About' },
+    { item: 'About', href: '/about' },
     { item: 'Services', href: '/service' },
     { item: 'Contact', href: '/contact' },
   ];
@@ -26,10 +26,10 @@ function HeaderComponent() {
             )}
           </div>
           <div className="hidden items-center space-x-3 px-2 md:flex ">
-            <div className="rounded py-2 px-2 text-lg font-semibold text-black transition duration-300 ">
+            <div className="rounded py-2 px-2 text-lg font-semibold text-black after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-full after:origin-bottom-right after:scale-x-0 after:bg-[#0E63F3] after:transition after:duration-500 after:ease-out hover:after:origin-bottom-left hover:after:scale-x-100">
               <Link href="/signup">Sign In</Link>
             </div>
-            <div className="rounded-lg bg-blue-500 py-2 px-4 text-xl font-semibold !text-white shadow-lg shadow-blue-500">
+            <div className="rounded-lg bg-blue-500 py-2 px-4 text-xl font-semibold !text-white shadow-lg shadow-blue-500 hover:!text-green-500 hover:shadow-green-500 ">
               <Link href="/register">Register</Link>
             </div>
           </div>
